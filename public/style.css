@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#ISSMap {
+    height: 360px;           
+}
+
+#data-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* entry is a class which is created dynamically using javascript*/
+.entry,
+.container{
+    padding:1em;
+    background: #AAA;
+    margin: 1em;
+    border-radius: 1em;
+    flex: 0 1 20%;
+    max-width: 300px;
+    transition: transform 250ms ease-in-out;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+}
+
+.container{
+    max-width: 300px;
+}
+
+.entry:hover,
+.container:hover{
+    transform: scale(1.1);
+    background: rgb(161, 248, 90);
+    color: black;
+}
+
+nav{
+    background:#AAA;
+    margin-bottom: 1em;
+}
+
+nav a{
+    text-decoration:none;
+    color: black;
+    padding:1em;
+    display: inline-block;
+}
+
+a:hover,
+a:focus{
+    background: rgb(161, 248, 90);
+    text-align: center;
+}
+
+button {
+    margin: 1em;
+    padding: 1em;
+}
+
+button:hover{
+    background-color: rgb(161, 248, 90);
+}
