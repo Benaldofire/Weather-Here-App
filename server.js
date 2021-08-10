@@ -6,7 +6,9 @@ require('dotenv').config();
 
 app.use(express.static("public"));
 app.use(express.json({limit: '1mb'}));
-app.listen(3000, ()=> console.log("Listening on port 3000"));
+const port = process.env.PORT || 3000;
+
+app.listen(port, ()=> console.log(`Listening on port: ${port}` ));
 
 //create database
 const database = new Datastore("database.db");
