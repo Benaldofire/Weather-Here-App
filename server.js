@@ -5,7 +5,7 @@ const fetch = require('node-fetch');
 require('dotenv').config();
 
 app.use(express.static("public"));
-app.use(express.json({limit: '1mb'}));
+app.use(express.json({limit: '1mb'})); //process body of post requests coming in
 const port = process.env.PORT || 3000;
 
 app.listen(port, ()=> console.log(`Listening on port: ${port}` ));
@@ -41,7 +41,6 @@ app.get('/api', (request, response)=>{
         }
         response.json(data);
     });
-
 })
 
 //route for the weather. Makes request on the webserver to the weather API and returns to the client.
